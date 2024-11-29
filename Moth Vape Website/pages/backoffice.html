@@ -10,15 +10,24 @@
 <body>
     <div class="sidebar">
         <div class="header">
-            <img class="logo-icon" src="../assets/pictures/icons/logo-icon.png" alt="Moth Vape Logo" title="Moth Vape Logo">
-    
+            <!-- Logo -->
+            <img class="logo-icon" src="../assets/pictures/icons/moth-vape-logo.png" alt="Moth Vape Logo" title="Moth Vape Logo">
+
+            <!-- Welcome Message -->
             <div class="welcome">Welcome, <span>Admin!</span></div>
-            <div class="email-icon"><img src="../assets/pictures/icons/email-icon.png" alt="Email Icon" ></div>
+
+            <!-- Email Icon -->
+            <div class="email-icon">
+                <img src="../assets/pictures/icons/email-icon.png" alt="Email Icon">
+            </div>
+
+            <!-- Date and Time Display -->
             <div id="date-display">Date: [Date]</div>
             <div id="time-display">Time: [Time]</div>
         </div>
 
         <div class="middle">
+            <!-- Sidebar Navigation Links -->
             <nav>
                 <div class="sidebar-item-group">
                     <div class="sidebar-item-active">Dashboard</div>
@@ -31,37 +40,49 @@
                 </div>
             </nav>
         </div>
-        
 
+        <!-- Sign-Out Button -->
         <button class="signout-button" onclick="signOut()">SIGN OUT</button>
     </div>
 
     <div class="main-content">
         <div class="card-container">
+            <!-- Order Logs Card -->
             <div class="card">
                 <img src="../assets/pictures/icons/order-logs-icon.png" alt="Order Logs Icon" class="card-icon">
                 <p>Order Logs</p>
             </div>
+
+            <!-- Inventory Card -->
             <div class="card">
                 <img src="../assets/pictures/icons/inventory-icon.png" alt="Inventory Icon" class="card-icon">
                 <p>Inventory</p>
             </div>
+
+            <!-- Employees Card -->
             <div class="card">
                 <img src="../assets/pictures/icons/employees-icon.png" alt="Employees Icon" class="card-icon">
                 <p>Employees</p>
             </div>
+
+            <!-- Categories Card -->
             <div class="card">
                 <img src="../assets/pictures/icons/categories-icon.png" alt="Categories Icon" class="card-icon">
                 <p>Categories</p>
             </div>
+
+            <!-- Sales Report Card -->
             <div class="card">
                 <img src="../assets/pictures/icons/sales-report-icon.png" alt="Sales Report Icon" class="card-icon">
                 <p>Sales Report</p>
             </div>
+
+            <!-- Enter POS Card -->
             <div class="card">
                 <img src="../assets/pictures/icons/order-logs-icon.png" alt="Inventory Icon" class="card-icon">
                 <p>Enter POS</p>
             </div>
         </div>
+    </div>
 </body>
 </html>

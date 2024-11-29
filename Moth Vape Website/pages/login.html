@@ -8,44 +8,74 @@
     <script defer src="../assets/scripts/login.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="main">
         <div class="red-vertical-panel">
-            <img class="logo-icon" src="../assets/pictures/icons/logo-icon.png" alt="Moth Vape Logo" title="Moth Vape Logo">
+            <!-- Logo -->
+            <img class="logo-icon" src="../assets/pictures/icons/moth-vape-logo.png" alt="Moth Vape Logo" title="Moth Vape Logo">
 
+            <!-- Description Text -->
             <p class="description">
                 Welcome! Please enter your email and password.
             </p>
 
+            <!-- Error Message Placeholder -->
             <p id="error-message" class="error-message"></p>
-            
+        
+            <!-- Login Form -->
             <form id="form" action="../pages/backoffice.html">
+                <!-- Email Input Field -->
                 <div class="input-field-group">
                     <div class="input-field-label">
+                        <!-- Email Icon -->
                         <img class="input-field-icon" src="../assets/pictures/icons/email-icon.png" alt="Email Icon" title="Email Icon">
                         <div class="input-field-text">
                             Email
                         </div>
                     </div>
-                    <input required id="email-input" class="input-field" type="email" placeholder="Enter email...">
+                    <!-- Email Input -->
+                    <input 
+                        required 
+                        id="email-input" 
+                        class="input-field" 
+                        type="email" 
+                        placeholder="Enter email...">
                 </div>
-    
+                
+                <!-- Password Input Field -->
                 <div class="input-field-group">
                     <div class="input-field-label">
+                        <!-- Password Icon -->
                         <img class="input-field-icon" src="../assets/pictures/icons/key-icon.png" alt="Password Icon" title="Password Icon">
                         <div class="input-field-text">
                             Password
                         </div>
                     </div>
-                    <input required id="password-input" class="input-field" type="password" placeholder="Enter password...">
+                    <!-- Password Input -->
+                    <input 
+                        required 
+                        id="password-input" 
+                        class="input-field" 
+                        type="password" 
+                        placeholder="Enter password...">
+                    
+                    <!-- Show Password Toggle -->
                     <div class="show-password-group">
-                        <input id="show-password-toggle" type="checkbox" onclick="showPassword()">
+                        <input 
+                            id="show-password-toggle" 
+                            type="checkbox" 
+                            onclick="showPassword()">
                         <label for="show-password-toggle">Show Password</label>
                     </div>
-
-                    <button id="login-button" class="login-button" type="submit">
+                    
+                    <!-- Login Button -->
+                    <button 
+                        id="login-button" 
+                        class="login-button" 
+                        type="submit">
                         LOGIN
                     </button>
                 </div>
+                
             </form>
         </div>
     </div>

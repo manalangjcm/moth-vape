@@ -1,40 +1,37 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    padding-left: 380px;
-    padding-top: 50px;
+    padding: 50px 0 0 380px;
 }
 
 .sidebar {
-    background-image: url('../../assets/pictures/backgrounds/black-background.jpg');
-    background-color: black;
-    color: white;
     width: 350px;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
+    background: black url('../../assets/pictures/backgrounds/black-background.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding-top: 20px;
 }
 
-.header
-{
+.header {
     margin-bottom: 30px;
 }
 
-.middle
-{
+.middle {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
     margin-bottom: 40px;
 }
 
-.logo-icon
-{
+.logo-icon {
     width: 100px;
 }
 
@@ -48,7 +45,6 @@ body {
 }
 
 .sidebar .welcome span {
-
     color: white;
     font-weight: bold;
 }
@@ -62,8 +58,7 @@ body {
     text-align: center;
 }
 
-.sidebar-item-group
-{
+.sidebar-item-group {
     display: flex;
     flex-direction: column;
 }
@@ -72,9 +67,9 @@ body {
     padding: 15px;
     background-color: #2D2D2D;
     cursor: pointer;
-    border-radius: 0;
     text-align: left;
-    transition: background-color 0.15s;
+    border-radius: 0;
+    transition: all 0.08s ease-in-out;
 }
 
 .sidebar-item-group .sidebar-item-active {
@@ -87,30 +82,28 @@ body {
     background-color: #555;
 }
 
-.signout-button 
-{
+.signout-button {
+    width: 80%;
     padding: 10px;
     background: white;
     color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 80%;
-    transition: all 0.15s;
     font-weight: bold;
+    transition: all 0.08s ease-in-out;
 }
 
-.signout-button:hover
-{
+.signout-button:hover {
     background-color: grey;
     color: white;
 }
 
 .card-container {
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
-    width: 80%;
 }
 
 .card {
@@ -122,7 +115,7 @@ body {
     border: 2px solid black;
     border-radius: 10px;
     cursor: pointer;    
-    transition: all 0.15s;
+    transition: all 0.08s ease-in-out;
 }
 
 .card p {
@@ -132,12 +125,12 @@ body {
 .card-icon {
     width: 50px;
     height: 50px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    scale: 2;
+    margin: 10px 0 30px;
+    transform: scale(2);
 }
 
 .card:hover {
     background-color: #e9e9e9;
     font-weight: bold;
+    transform: scale(1.05);
 }

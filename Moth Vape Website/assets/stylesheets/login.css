@@ -15,7 +15,7 @@ p
     margin: 0;
 }
 
-.container
+.main
 {
     display: flex;
     justify-content: center;
