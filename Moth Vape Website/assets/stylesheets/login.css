@@ -5,7 +5,7 @@
 
 body
 {
-    background-image: url("/assets/pictures/backgrounds/black-background.jpg");
+    background-image: url("../../assets/pictures/backgrounds/black-background.jpg");
     background-size: 800px;
     margin: 0;
 }

@@ -52,7 +52,7 @@ function updateTime(time_display)
 
 function signOut()
 {
-    location.href = "/pages/login.html";
+    location.href = "../pages/login.html";
 }
 
 dateAndTimeInterval();
