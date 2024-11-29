@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-left: 380px;
+    padding-top: 50px;
+}
+
+.sidebar {
+    background-image: url('/assets/pictures/backgrounds/black-background.jpg');
+    background-color: black;
+    color: white;
+    width: 350px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header
+{
+    margin-bottom: 30px;
+}
+
+.middle
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.logo-icon
+{
+    width: 100px;
+}
+
+.sidebar .logo span {
+    color: #ffffff;
+}
+
+.sidebar .welcome {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.sidebar .welcome span {
+
+    color: white;
+    font-weight: bold;
+}
+
+.sidebar .email-icon {
+    font-size: 20px;
+}
+
+.sidebar .datetime {
+    text-align: center;
+}
+
+.sidebar-item-group
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-item-group div {
+    padding: 15px;
+    background-color: #2D2D2D;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: left;
+    transition: background-color 0.15s;
+}
+
+.sidebar-item-group .sidebar-item-active {
+    background-color: #878787;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.sidebar-item-group div:hover {
+    background-color: #555;
+}
+
+.signout-button 
+{
+    padding: 10px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 80%;
+    transition: all 0.15s;
+    font-weight: bold;
+}
+
+.signout-button:hover
+{
+    background-color: grey;
+    color: white;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    width: 80%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;    
+    transition: all 0.15s;
+}
+
+.card p {
+    margin-bottom: -10px;
+}
+
+.card-icon {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    scale: 2;
+}
+
+.card:hover {
+    background-color: #e9e9e9;
+    font-weight: bold;
+}

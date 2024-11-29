@@ -1,0 +1,139 @@
+*
+{
+    font-family: Arial;
+}
+
+body
+{
+    background-image: url("/assets/pictures/backgrounds/black-background.jpg");
+    background-size: 800px;
+    margin: 0;
+}
+
+p
+{
+    margin: 0;
+}
+
+.container
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.red-vertical-panel
+{
+    background-color: #5B0F0E;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-icon
+{
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.description
+{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+.input-field-group
+{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.input-field-label
+{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-field-icon
+{
+    width: 35px;
+    margin-right: 8px;
+}
+
+.input-field-text
+{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.input-field
+{
+    font-size: 14px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.show-password-group {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.show-password-group input[type="checkbox"] {
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.show-password-group label {
+    margin: 0;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+}
+
+.login-button
+{
+    background-color: #51AE2F;
+    border: none;
+    border-radius: 8px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.login-button:hover
+{
+    background-color: #60ce38;
+}
+
+.login-button:active
+{
+    background-color: #408a26
+}
+
+.error-message
+{
+    color: white;
+    font-style: italic;
+    margin-bottom: 20px;
+}
