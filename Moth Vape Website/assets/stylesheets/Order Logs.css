@@ -1,0 +1,104 @@
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Matches the parent element's color */
+}
+
+h1 {
+    font-size: 55px;
+}
+
+.filter {
+    display: flex; /* Create a flex container */
+    justify-content: space-between; /* Push left and right sections to the edges */
+    align-items: flex-end; /* Align all items to the bottom */
+    width: 100%; /* Ensure the filter container spans the full width */
+    gap: 10px; /* Add spacing between the left and right groups */
+    padding-bottom: 10px; /* Optional: Add spacing between content and bottom edge */
+}
+
+.left-buttons{
+    display: flex; /* Align items horizontally within each group */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Add spacing between elements in each group */
+}
+
+.right-controls {
+    display: flex; /* Create a flex container */
+    justify-content: flex-end; /* Push left and right sections to the edges */
+}
+
+.left-buttons input[type="image"] {
+    width: 200px; /* Adjust width for rectangular shape */
+    height: auto; /* Maintain aspect ratio */
+    cursor: pointer; /* Make clickable */
+    border: none; /* Remove any border */
+    display: block; /* Ensure no extra whitespace around images */
+}
+
+.filter img {
+    width: 30px; /* Adjust icon size */
+    height: 30px;
+    cursor: pointer; /* Make the icon clickable */
+    display: block; /* Ensure the image does not have extra whitespace */
+}
+
+.search-bar {
+    width: 200px; /* Adjust width of the search bar */
+    padding: 5px 10px; /* Add padding for better UX */
+    font-size: 16px; /* Adjust font size */
+    border: 1px solid #ccc; /* Add a subtle border */
+    border-radius: 4px; /* Round corners */
+    outline: none; /* Remove default outline on focus */
+}
+
+.search-bar:focus {
+    border-color: #007BFF; /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle focus effect */
+}
+
+.table {
+    margin-top: 10px;
+    width: 100%; /* Make the table container span the entire width */
+    display: flex;
+    justify-content: center; /* Center-align the table within the container if needed */
+}
+
+table {
+    width: 100%; /* Make the table itself span the entire width */
+    border-collapse: collapse;
+    height: auto; /* Allow the table to adjust height based on content */
+}
+
+th, td {
+    padding: 10px; /* Adjust padding for table cells */
+    text-align: center; /* Align text to the left */
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+.action_button {
+    width: 40px;
+    height: 40px;
+    padding-left: 4px;
+}
+
+.download {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom edge */
+    right: 20px; /* Distance from the right edge */
+    width: 200px; /* Adjust the size of the button */
+    height: auto;
+    cursor: pointer; /* Makes it clear it's clickable */
+    border-radius: 10px;
+}

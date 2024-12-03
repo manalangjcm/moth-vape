@@ -5,7 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moth Vape | Back Office</title>
     <link rel="stylesheet" href="../assets/stylesheets/backoffice.css">
+    <link rel="stylesheet" href="../assets/stylesheets/Order Logs.css">
     <script defer src="../assets/scripts/backoffice.js"></script>
+    <style>
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .active-tab {
+            background-color: #878787;
+            color: #ffffff;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
     <div class="sidebar">
@@ -30,13 +46,13 @@
             <!-- Sidebar Navigation Links -->
             <nav>
                 <div class="sidebar-item-group">
-                    <div class="sidebar-item-active">Dashboard</div>
-                    <div>Order Logs</div>
-                    <div>Inventory</div>
-                    <div>Employees</div>
-                    <div>Categories</div>
-                    <div>Sales Report</div>
-                    <div>Enter POS</div>
+                    <div class="tab active-tab" onclick="showTab('dashboard')">Dashboard</div>
+                    <div class="tab" onclick="showTab('order-logs')">Order Logs</div>
+                    <div class="tab" onclick="showTab('inventory')">Inventory</div>
+                    <div class="tab" onclick="showTab('employees')">Employees</div>
+                    <div class="tab" onclick="showTab('categories')">Categories</div>
+                    <div class="tab" onclick="showTab('sales-report')">Sales Report</div>
+                    <div class="tab" onclick="showTab('pos')">Enter POS</div>
                 </div>
             </nav>
         </div>
@@ -46,43 +62,184 @@
     </div>
 
     <div class="main-content">
-        <div class="card-container">
-            <!-- Order Logs Card -->
-            <div class="card">
-                <img src="../assets/pictures/icons/order-logs-icon.png" alt="Order Logs Icon" class="card-icon">
-                <p>Order Logs</p>
-            </div>
-
-            <!-- Inventory Card -->
-            <div class="card">
-                <img src="../assets/pictures/icons/inventory-icon.png" alt="Inventory Icon" class="card-icon">
-                <p>Inventory</p>
-            </div>
-
-            <!-- Employees Card -->
-            <div class="card">
-                <img src="../assets/pictures/icons/employees-icon.png" alt="Employees Icon" class="card-icon">
-                <p>Employees</p>
-            </div>
-
-            <!-- Categories Card -->
-            <div class="card">
-                <img src="../assets/pictures/icons/categories-icon.png" alt="Categories Icon" class="card-icon">
-                <p>Categories</p>
-            </div>
-
-            <!-- Sales Report Card -->
-            <div class="card">
-                <img src="../assets/pictures/icons/sales-report-icon.png" alt="Sales Report Icon" class="card-icon">
-                <p>Sales Report</p>
-            </div>
-
-            <!-- Enter POS Card -->
-            <div class="card">
-                <img src="../assets/pictures/icons/order-logs-icon.png" alt="Inventory Icon" class="card-icon">
-                <p>Enter POS</p>
+        <!-- Dashboard Content -->
+        <div id="dashboard-content" class="tab-content active">
+            <div class="page-title"><h1>Dashboard</h1></div>
+            <div class="card-container">
+                <div class="card" onclick="showTab('order-logs')">
+                    <img src="../assets/pictures/icons/order-logs-icon.png" alt="Order Logs Icon" class="card-icon">
+                    <p>Order Logs</p>
+                </div>
+                <div class="card" onclick="showTab('inventory')">
+                    <img src="../assets/pictures/icons/inventory-icon.png" alt="Inventory Icon" class="card-icon">
+                    <p>Inventory</p>
+                </div>
+                <div class="card" onclick="showTab('employees')">
+                    <img src="../assets/pictures/icons/employees-icon.png" alt="Employees Icon" class="card-icon">
+                    <p>Employees</p>
+                </div>
+                <div class="card" onclick="showTab('categories')">
+                    <img src="../assets/pictures/icons/categories-icon.png" alt="Categories Icon" class="card-icon">
+                    <p>Categories</p>
+                </div>
+                <div class="card" onclick="showTab('sales-report')">
+                    <img src="../assets/pictures/icons/sales-report-icon.png" alt="Sales Report Icon" class="card-icon">
+                    <p>Sales Report</p>
+                </div>
+                <div class="card" onclick="showTab('pos')">
+                    <img src="../assets/pictures/icons/order-logs-icon.png" alt="POS Icon" class="card-icon">
+                    <p>Enter POS</p>
+                </div>
             </div>
         </div>
+
+        <!-- Order Logs Content -->
+        <div id="order-logs-content" class="tab-content">
+            <div class="page-title"><h1>Order Logs</h1></div>
+            <div class="filter">
+                <div class="right-controls">
+                    <img src="../assets/pictures/icons/reload-icon.png" alt="Reload Icon" />
+                    <input type="text" class="search-bar" placeholder="Search..." />
+                    <img src="../assets/pictures/icons/filter-icon.png" alt="Filter Icon" />
+                </div>
+            </div>
+            <div class="table">
+                <table>
+                    <tr class="tbl_header">
+                        <th>ID</th>
+                        <th>Products Included</th>
+                        <th>Total Price</th>
+                        <th>Received Amount</th>
+                        <th>Customer Name</th>
+                        <th>Order Status</th>
+                        <th>Checkout Date/Time</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>Vape X</td>
+                        <td>99.00</td>
+                        <td>100.00</td>
+                        <td>John Doe</td>
+                        <td>Paid</td>
+                        <td>09/27/2003<br>10:32 AM</td>
+                        <td>
+                            <input type="image" src="../assets/pictures/icons/Button_Edit.png" alt="Edit" class="action_button">
+                            <input type="image" src="../assets/pictures/icons/Button_Info.png" alt="Info" class="action_button">
+                            <input type="image" src="../assets/pictures/icons/Button_Delete.png" alt="Delete" class="action_button">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Inventory Content -->
+        <div id="inventory-content" class="tab-content">
+            <div class="page-title"><h1>Inventory</h1></div>
+            <div class="filter">
+                    <!-- Align Left Side-->
+                    <div class="left-buttons">
+                        <input type="image" src="../assets/pictures/icons/Button_Add_New.png" alt="Add New Item" />
+                        <input type="image" src="../assets/pictures/icons/Button_Add_Existing.png" alt="Add Existing Item" />
+                        <input type="image" src="../assets/pictures/icons/Button_Remove.png" alt="Remove Item" />
+                    </div>
+                    <!-- Align Right Side-->
+                    <div class="right-controls">
+                        <img src="../assets/pictures/icons/reload-icon.png" alt="Reload Icon" />
+                        <input type="text" class="search-bar" placeholder="Search..." />
+                        <img src="../assets/pictures/icons/filter-icon.png" alt="Filter Icon" />
+                    </div>
+            </div>
+            <div class="table">
+                <table style="width:100%">
+                    <tr>
+                        <th></th>
+                        <th>SKU</th>
+                        <th>Batch NO.#</th>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>In stock</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="box1" class="checkbox"></td>
+                        <td>SKU01</td>
+                        <td>SKU01</td>
+                        <td>Brand X Disposable Vape</td>
+                        <td>Vape</td>
+                        <td>97</td>
+                        <td><input type="image" src="../assets/pictures/icons/Button_Edit.png" class="action_button"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="box2" class="checkbox"></td>
+                        <td>SKU02</td>
+                        <td>SKU02</td>
+                        <td>Bran Y Refilable Vape</td>
+                        <td>Vape</td>
+                        <td>15</td>
+                        <td><input type="image" src="../assets/pictures/icons/Button_Edit.png" class="action_button"/></td>    
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" id="box3" class="checkbox"></td>
+                        <td>SKU03</td>
+                        <td>SKU03</td>
+                        <td>Bran Y Cotton</td>
+                        <td>Accessory</td>
+                        <td>15</td>
+                        <td><input type="image" src="../assets/pictures/icons/Button_Edit.png" class="action_button"/></td>
+                    </tr>
+                </table>
+                <div>
+                    <input type="image" src="../assets/pictures/icons/Download_Button.png" class="download"/>
+                </div>
+            </div>
+        </div>
+
+        <!-- Employees Content -->
+        <div id="employees-content" class="tab-content">
+            <div class="page-title"><h1>Employees</h1></div>
+            <!-- Employees content goes here -->
+        </div>
+
+        <!-- Additional Tabs -->
+        <div id="categories-content" class="tab-content">
+            <div class="page-title"><h1>Categories</h1></div>
+            <!-- Categories content -->
+        </div>
+        <div id="sales-report-content" class="tab-content">
+            <div class="page-title"><h1>Sales Report</h1></div>
+            <!-- Sales Report content -->
+        </div>
+        <div id="pos-content" class="tab-content">
+            <div class="page-title"><h1>Enter POS</h1></div>
+            <!-- POS content -->
+        </div>
     </div>
+
+    <div class="slide"></div>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            // Show the selected tab content
+            document.getElementById(tabName + '-content').classList.add('active');
+
+            // Update tab styles
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active-tab'));
+            document.querySelector('.tab[onclick="showTab(\'' + tabName + '\')"]').classList.add('active-tab');
+
+            // Slide animation
+            const slide = document.querySelector('.slide');
+            slide.style.transform = 'translateX(0)';
+            setTimeout(() => slide.style.transform = 'translateX(100%)', 10);
+        }
+
+        // Initialize Dashboard as the default tab
+        document.addEventListener('DOMContentLoaded', () => {
+            showTab('dashboard');
+        });
+    </script>
 </body>
 </html>
